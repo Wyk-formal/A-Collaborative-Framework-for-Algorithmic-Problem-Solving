@@ -28,24 +28,26 @@ pip install -r requirements.txt
 
 2. **Start Neo4j Database**
 
-This project provides a pre-configured Neo4j Docker container with complete OI WIKI algorithm data.
+This project uses a pre-configured Neo4j Docker container with complete OI WIKI algorithm data.
 
-**Option A: Use Pre-packaged Database (Recommended)**
+**Download Database from Releases**
 
-```bash
-cd neo4j-dump-deploy
-docker compose up -d
-```
-
-**Note**: Ensure `dumps/neo4j.dump` exists for first-time import. If you've run before and generated `neo4j/data`, the script will skip import. To force re-import, run `make clean` first.
-
-**Option B: Download Database from Releases**
+Due to file size limitations, the Neo4j database file needs to be downloaded separately from GitHub Releases:
 
 ```bash
 cd neo4j-dump-deploy
-scripts/get_dump.sh "<RELEASE_ASSET_URL>" neo4j.dump
+scripts/get_dump.sh "https://github.com/Wyk-formal/A-Collaborative-Framework-for-Algorithmic-Problem-Solving/releases/download/v1.0.0/neo4j.dump" neo4j.dump
 docker compose up -d
 ```
+
+**Alternative Download Method:**
+
+If the script doesn't work, you can manually download:
+
+1. Go to the [Releases page](https://github.com/Wyk-formal/A-Collaborative-Framework-for-Algorithmic-Problem-Solving/releases)
+2. Download `neo4j.dump` from the latest release
+3. Place it in the `neo4j-dump-deploy/dumps/` directory
+4. Run `docker compose up -d`
 
 **Access Neo4j:**
 
@@ -325,7 +327,10 @@ This project uses a Docker containerized Neo4j database with complete OI WIKI al
 # Enter database deployment directory
 cd neo4j-dump-deploy
 
-# Start database (using pre-packaged data)
+# Download database from releases (first time only)
+scripts/get_dump.sh "https://github.com/Wyk-formal/A-Collaborative-Framework-for-Algorithmic-Problem-Solving/releases/download/v1.0.0/neo4j.dump" neo4j.dump
+
+# Start database
 docker compose up -d
 
 # Optional: Override NEO4J_AUTH via .env file
