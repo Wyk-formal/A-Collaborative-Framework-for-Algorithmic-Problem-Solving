@@ -2,7 +2,7 @@
 
 An intelligent algorithm competition solution based on RAG (Retrieval-Augmented Generation) technology, supporting automatic problem analysis, algorithm recommendation, code generation, and validation.
 
-**Author Contact:** [Please fill in your email address here]
+**Author Contact:** yukaiwu002@gmail.com
 
 ---
 
