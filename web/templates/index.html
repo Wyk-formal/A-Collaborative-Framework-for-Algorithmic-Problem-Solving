@@ -1,0 +1,183 @@
+{% extends "base.html" %}
+
+{% block title %}首页 - 算法竞赛RAG助手{% endblock %}
+
+{% block content %}
+<div class="hero-section bg-gradient-primary text-white py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h1 class="display-4 fw-bold mb-4">
+                    智能算法竞赛助手
+                </h1>
+                <p class="lead mb-4">
+                    基于RAG技术的智能算法题目分析和代码生成系统，
+                    支持自动题目解析、算法推荐、代码生成和验证。
+                </p>
+                <div class="d-grid gap-2 d-md-flex">
+                    <a href="/solve" class="btn btn-light btn-lg px-4">
+                        <i class="fas fa-play-circle"></i>
+                        开始解题
+                    </a>
+                    <a href="/docs" class="btn btn-outline-light btn-lg px-4">
+                        <i class="fas fa-book"></i>
+                        查看文档
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="text-center">
+                    <i class="fas fa-robot display-1 opacity-75"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="features-section py-5">
+    <div class="container">
+        <div class="row text-center mb-5">
+            <div class="col-12">
+                <h2 class="fw-bold">核心功能</h2>
+                <p class="text-muted">强大的AI驱动算法竞赛解决方案</p>
+            </div>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-brain text-primary"></i>
+                        </div>
+                        <h4>智能题目分析</h4>
+                        <p class="text-muted">自动解析题目结构，提取关键信息，识别算法类型和难度等级</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-search text-primary"></i>
+                        </div>
+                        <h4>混合智能检索</h4>
+                        <p class="text-muted">结合全文、向量和关键词检索，精准匹配最相关的算法知识</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-code text-primary"></i>
+                        </div>
+                        <h4>代码自动生成</h4>
+                        <p class="text-muted">基于算法知识库生成完整可运行的C++代码，符合竞赛标准</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-check-circle text-primary"></i>
+                        </div>
+                        <h4>自动验证系统</h4>
+                        <p class="text-muted">编译运行代码，验证样例正确性，提供详细的错误分析</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-sync-alt text-primary"></i>
+                        </div>
+                        <h4>迭代优化</h4>
+                        <p class="text-muted">自动修复代码错误，持续优化直到通过所有测试样例</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-chart-line text-primary"></i>
+                        </div>
+                        <h4>性能分析</h4>
+                        <p class="text-muted">提供时间复杂度和空间复杂度分析，确保算法效率</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="how-it-works py-5 bg-light">
+    <div class="container">
+        <div class="row text-center mb-5">
+            <div class="col-12">
+                <h2 class="fw-bold">工作流程</h2>
+                <p class="text-muted">简单几步，获得专业解答</p>
+            </div>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-3">
+                <div class="text-center">
+                    <div class="step-number bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3">
+                        <span class="fw-bold">1</span>
+                    </div>
+                    <h5>输入题目</h5>
+                    <p class="text-muted">输入完整的算法题目，包括描述、样例等</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="text-center">
+                    <div class="step-number bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3">
+                        <span class="fw-bold">2</span>
+                    </div>
+                    <h5>AI分析</h5>
+                    <p class="text-muted">智能分析题目，提取关键信息和算法类型</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="text-center">
+                    <div class="step-number bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3">
+                        <span class="fw-bold">3</span>
+                    </div>
+                    <h5>检索算法</h5>
+                    <p class="text-muted">从知识库中检索最相关的算法和代码示例</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="text-center">
+                    <div class="step-number bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3">
+                        <span class="fw-bold">4</span>
+                    </div>
+                    <h5>生成验证</h5>
+                    <p class="text-muted">生成代码并自动验证，确保正确性</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_scripts %}
+<style>
+.hero-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.feature-icon i {
+    font-size: 3rem;
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+}
+</style>
+{% endblock %}
+

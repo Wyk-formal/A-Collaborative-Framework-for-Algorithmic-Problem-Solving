@@ -1,0 +1,18 @@
+services:
+  neo4j:
+    image: neo4j:5.26.10
+    container_name: neo4j-paper-repro
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+    environment:
+      NEO4J_AUTH: neo4j/passcode123
+      NEO4J_dbms_default__database: neo4j
+    volumes:
+      - ./neo4j/data:/data
+      - ./neo4j/logs:/logs
+      - ./neo4j/plugins:/plugins
+      - ./dumps:/imports
+      - ./scripts:/scripts:ro
+    command: >
+      bash -lc "/scripts/load_dump.sh"
